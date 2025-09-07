@@ -22,11 +22,11 @@ func ConnectDB()  {
 
 	defer cancel()
 
-	err = client.Connext(ctx)
+	err = client.Connect(ctx)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	DB = client.Database("bookStore")
-	log.printLn("Connected to MongoDB")
+	log.Println("Connected to MongoDB")
 }
